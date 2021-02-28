@@ -4,7 +4,7 @@ import './index.css';
 
 function Square(props) {
     return (
-      <button className="square" onClick={props.onClick} >
+      <button className="square" id={props.id} onClick={props.onClick} >
         {props.value}
       </button>
     );
@@ -16,28 +16,26 @@ class Board extends React.Component {
 		<Square 
 			value={this.props.squares[i]} 
 			onClick={() => this.props.onClick(i)}
+			id = {i}
 		/>
 		);
   }
 
   render() {
+	  let gameRows =[];
+	  let x, j, max = 0;
+	  for(x=0; x<3; x++){
+		  let row = [];		
+		  for(j=0; j<3; j++){
+			  max++
+			  row.push(this.renderSquare(max));
+		  }
+		gameRows.push(<div className="board-row" id={x+1}>{row}</div>);
+	  }
     return (
+	
       <div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+	  {gameRows}
       </div>
     );
   }
@@ -88,7 +86,7 @@ class Game extends React.Component {
 		squares[i]= this.state.xIsNext ? 'X' : 'O';		
 		let row = Math.floor(i/3)+1;
 		let col = (i+1)%3;
-		if(col==0) {
+		if(col===0) {
 			col = 3;	
 		}
 		this.setState({
@@ -116,7 +114,7 @@ class Game extends React.Component {
 	const moves = history.map((step, move) => {
 		const desc = move ? 'Go to move #' + move + ', row: ' + step.row + ', column: ' +step.col : 'Go to game start';
 		return (<li key={move}>
-					<button onClick={() => this.jumpTo(move)}  style= {move==history.length-1 ? {fontWeight: 'bold'} : {fontWeight: 'normal'}}>{desc}</button>
+					<button onClick={() => this.jumpTo(move)}  style= {move===history.length-1 ? {fontWeight: 'bold'} : {fontWeight: 'normal'}}>{desc}</button>
 				</li>)
 	});
 	
