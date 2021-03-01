@@ -130,10 +130,14 @@ class Game extends React.Component {
 	});
 	
 	moves = (this.state.sortOrder==="Asc" ? moves : moves.reverse());
-		
+	
+	console.log();
+	
 	let status;
 	if(winningCalculation){
 		status = 'Winner: ' + winningCalculation.winner;
+	} else if (!current.squares.includes(null)){
+		status = 'The game has ended in a draw.';
 	} else {
 		status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
 	}
