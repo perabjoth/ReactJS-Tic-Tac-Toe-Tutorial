@@ -1,5 +1,4 @@
-# Live Demo of this Repository Available Here:
-https://tictactoereacttutorial.herokuapp.com/
+# Live Demo of this Repository Available Here: https://tictactoereacttutorial.herokuapp.com/
 
 # Getting Started with Create React App
 
