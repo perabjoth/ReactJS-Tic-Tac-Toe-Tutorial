@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 function Square(props) {
+	let squareClass = 'square';
+	if(props.winningSquare) {
+		squareClass+=' winner';
+		}
     return (
-      <button className="square" id={props.id} onClick={props.onClick} style={props.winningSquare ? {background : 'red'} : {background: 'white'}} >
+      <button className={squareClass} id={props.id} onClick={props.onClick} >
         {props.value}
       </button>
     );
@@ -37,7 +41,7 @@ class Board extends React.Component {
   
     return (
 	
-      <div>
+      <div className="squaresHolder">
 	  {gameRows}
       </div>
     );
@@ -123,9 +127,11 @@ class Game extends React.Component {
 	const winningCalculation  = calculateWinner(current.squares);
 	const winningSquares = winningCalculation ? winningCalculation.winningSquares : [];
 	let moves = history.map((step, move) => {
-		const desc = move ? 'Go to move #' + move + ', row: ' + step.row + ', column: ' + step.col : 'Go to game start';
-		return (<li key={move}>
-					<button key={move+'-'+step.row+'-'+step.col} onClick={() => this.jumpTo(move)}  style= {move===history.length-1 ? {fontWeight: 'bold'} : {fontWeight: 'normal'}}>{desc}</button>
+		const desc = move ? 'Go to move #' + move + '\n(row: ' + step.row + ', col: ' + step.col +')' : 'Go to game start';
+		let listClass = "list-group-item"
+		listClass+= move===history.length-1 ? ' active' : '';
+		return (<li className={listClass} key={move}>
+					<button className="btn"  key={move+'-'+step.row+'-'+step.col} onClick={() => this.jumpTo(move)} >{desc}</button>
 				</li>)
 	});
 	
@@ -147,15 +153,15 @@ class Game extends React.Component {
         <div className="game-board">
           <Board squares={current.squares} winningSquares={winningSquares} onClick={(i) => this.handleClick(i)}/>
         </div>
-        <div className="game-info">
+        <div className="game-info h5">
           <div>{status}</div>
-		  <div>Game History Sort Order: 
-			  <select value={this.state.sortOrder} onChange={this.handleSort}>
+		  <div className="game-history">Game History: 
+			  <select className="form-select" value={this.state.sortOrder} onChange={this.handleSort}>
 				<option value="Asc">Ascending</option>
 				<option value="Desc">Descending</option>
 			  </select>
 		  </div>
-          <ol>{moves}</ol>
+          <ol className="list-group">{moves}</ol>
         </div>
       </div>
     );

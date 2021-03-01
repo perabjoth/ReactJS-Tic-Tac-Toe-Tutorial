@@ -1,20 +1,47 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  background: powderblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ol, ul {
   padding-left: 30px;
 }
 
+.board-row{
+	display: flex;
+}
+
 .board-row:after {
   clear: both;
   content: "";
-  display: table;
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #2ba805;
+    box-shadow: 0 0 10px #2ba805;
+  }
+  50% {
+    background-color: #49e819;
+    box-shadow: 0 0 40px #49e819;
+  }
+  100% {
+    background-color: #2ba805;
+    box-shadow: 0 0 10px #2ba805;
+  }
 }
 
 .status {
   margin-bottom: 10px;
+}
+
+.winner{
+	background: red !important;
+	box-shadow: 0 0px 14px 4px red;
 }
 
 .square {
@@ -46,5 +73,13 @@ ol, ul {
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: 40px;
+}
+
+.game-history{
+	padding: 20px 0px;
+}
+
+.squaresHolder{
+	animation: glowing 1300ms infinite;
 }
