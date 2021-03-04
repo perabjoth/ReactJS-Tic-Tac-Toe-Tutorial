@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/ReactJS-Tic-Tac-Toe-Tutorial/static/css/main.05d7d11c.chunk.css",
+    "main.js": "/ReactJS-Tic-Tac-Toe-Tutorial/static/js/main.63aa758b.chunk.js",
+    "main.js.map": "/ReactJS-Tic-Tac-Toe-Tutorial/static/js/main.63aa758b.chunk.js.map",
+    "runtime-main.js": "/ReactJS-Tic-Tac-Toe-Tutorial/static/js/runtime-main.52066b84.js",
+    "runtime-main.js.map": "/ReactJS-Tic-Tac-Toe-Tutorial/static/js/runtime-main.52066b84.js.map",
+    "static/js/2.a3683d0c.chunk.js": "/ReactJS-Tic-Tac-Toe-Tutorial/static/js/2.a3683d0c.chunk.js",
+    "static/js/2.a3683d0c.chunk.js.map": "/ReactJS-Tic-Tac-Toe-Tutorial/static/js/2.a3683d0c.chunk.js.map",
+    "index.html": "/ReactJS-Tic-Tac-Toe-Tutorial/index.html",
+    "static/css/main.05d7d11c.chunk.css.map": "/ReactJS-Tic-Tac-Toe-Tutorial/static/css/main.05d7d11c.chunk.css.map",
+    "static/js/2.a3683d0c.chunk.js.LICENSE.txt": "/ReactJS-Tic-Tac-Toe-Tutorial/static/js/2.a3683d0c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.52066b84.js",
+    "static/js/2.a3683d0c.chunk.js",
+    "static/css/main.05d7d11c.chunk.css",
+    "static/js/main.63aa758b.chunk.js"
+  ]
+}
