@@ -1,6 +1,6 @@
 {
-  "homepage": "https://perabjoth.github.io/ReactJS-Tic-Tac-Toe-Tutorial",
-  "name": "tic-tac-toe",
+  "homepage": "https://perabjoth.github.io/TicTacToe",
+  "name": "tic-tac-toe"
   "version": "0.1.0",
   "private": true,
   "dependencies": {
