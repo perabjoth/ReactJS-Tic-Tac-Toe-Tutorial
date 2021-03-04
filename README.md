@@ -1,4 +1,4 @@
-# Live Demo of this Repository Available Here: https://tictactoereacttutorial.herokuapp.com/
+# Live Demo of this Repository Available Here: https://perabjoth.github.io/TicTacToe/
 
 # Getting Started with Create React App
 
