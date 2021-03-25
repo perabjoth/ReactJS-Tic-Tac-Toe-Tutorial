@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TicTacToe/static/css/main.3f350941.chunk.css",
+    "main.css": "/TicTacToe/static/css/main.ae50ba13.chunk.css",
     "main.js": "/TicTacToe/static/js/main.db57318d.chunk.js",
     "main.js.map": "/TicTacToe/static/js/main.db57318d.chunk.js.map",
     "runtime-main.js": "/TicTacToe/static/js/runtime-main.cbf7cd0c.js",
@@ -10,7 +10,7 @@
     "static/js/2.9528730c.chunk.js.map": "/TicTacToe/static/js/2.9528730c.chunk.js.map",
     "index.html": "/TicTacToe/index.html",
     "static/css/2.f80b7ed5.chunk.css.map": "/TicTacToe/static/css/2.f80b7ed5.chunk.css.map",
-    "static/css/main.3f350941.chunk.css.map": "/TicTacToe/static/css/main.3f350941.chunk.css.map",
+    "static/css/main.ae50ba13.chunk.css.map": "/TicTacToe/static/css/main.ae50ba13.chunk.css.map",
     "static/js/2.9528730c.chunk.js.LICENSE.txt": "/TicTacToe/static/js/2.9528730c.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/TicTacToe/static/media/outline-icons.ddae9b1b.woff"
   },
@@ -18,7 +18,7 @@
     "static/js/runtime-main.cbf7cd0c.js",
     "static/css/2.f80b7ed5.chunk.css",
     "static/js/2.9528730c.chunk.js",
-    "static/css/main.3f350941.chunk.css",
+    "static/css/main.ae50ba13.chunk.css",
     "static/js/main.db57318d.chunk.js"
   ]
 }
